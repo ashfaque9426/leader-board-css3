@@ -138,3 +138,45 @@ hr {
 .fa-clock {
     padding-right: 5px;
 }
+
+
+/* responsive design */
+/* for mobile devices */
+@media only screen and (max-width:688px) {
+    .container {
+        width: 100%;
+    }
+    .players, .blogs, .courses {
+        grid-template-columns: 1fr;
+    }
+    .player, .blog {
+        flex-direction: column;
+    }
+    .blogs .blog .thumbnail img {
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+    }
+    .courses {
+        grid-row-gap: 20px;
+    }
+    .courses .course {
+        width: 100%;
+    }
+    .courses .course img {
+        height: 155px;
+    }
+}
+
+/* for tablet devices */
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+    .container {
+        width: 100%;
+    }
+    .players, .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blogs {
+        grid-template-columns: 1fr;
+    }
+}
