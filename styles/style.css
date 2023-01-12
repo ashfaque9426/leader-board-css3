@@ -3,9 +3,58 @@
 
 /* universal styles */
 * {
-    /* margin: 0;
-    padding: 0; */
     box-sizing: border-box;
+}
+
+/* heading styles */
+header nav {
+    padding: 10px 0;
+    background-color: #562EFF;
+    color: #F3F1FF;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+header nav div:last-child {
+    display: flex;
+    align-items: center;
+}
+
+header nav div:last-child ul {
+    padding-left: 0;
+    width: 200px;
+    margin-right: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav div:last-child ul li {
+    list-style-type: none;
+}
+
+header nav div:last-child ul li a {
+    color: #F3F1FF;
+    text-decoration: none;
+}
+
+header nav img.logo {
+    width: 42px;
+}
+
+header nav img.propic {
+    width: 50px;
+    height: 50px;
+}
+
+header nav div span {
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: 500;
 }
 
 /* utility styles */
@@ -145,6 +194,22 @@ hr {
 @media only screen and (max-width:688px) {
     .container {
         width: 100%;
+    }
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+    header nav div:last-child {
+        flex-direction: column;
+    }
+    header nav div:last-child ul {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+    }
+    .top-players .section-title {
+        text-align: center;
     }
     .players, .blogs, .courses {
         grid-template-columns: 1fr;
